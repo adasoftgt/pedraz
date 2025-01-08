@@ -55,7 +55,7 @@ import pedrazLogo from '@images/pedraz-logo.png';
 const Contact = () => {
     return (
         <Box bg="yellow.300" p={8}>
-        <Stack direction={{ base: 'column', md: 'row' }} spacing={8}>
+        <Stack direction={{ base: 'column', md: 'row' }}>
             <Flex direction="column" alignItems="center" w={{ base: '100%', md: '50%' }}>
                 <Heading as="h2" mb={4}>
                     Ingresa tu nombre

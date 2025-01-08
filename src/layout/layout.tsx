@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Main from './Main';
 import { ColorModeProvider } from "@/components/ui/color-mode"
+import {Flex} from '@chakra-ui/react';
 
 
 
@@ -14,13 +15,13 @@ const Layout: React.FC<MainProps> = ({ children }) => {
     return (
         
         <ColorModeProvider>
-            <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+            <Flex direction="column" minH="100vh">
                 <Header />
                 <Main>
                     {children}
                 </Main>
                 <Footer />
-            </div>
+            </Flex>
         </ColorModeProvider>
         
         

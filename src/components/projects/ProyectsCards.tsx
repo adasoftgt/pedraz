@@ -2,16 +2,14 @@ import React from 'react';
 import { Grid, Box, Image, Heading, Text,Stack } from '@chakra-ui/react';
 import { Button } from '@/components/ui/button';
 
-import projectFrisa from '@projects/proyectos-frisa.png';
-import residencialesLasBrisas from '@projects/residenciales-las-brisas.png';
-import huaweiCanteen from '@projects/huawei-canteen.png';
+
 //colores
 import { Dark, Light } from '@/layout/colors/mode';
 
 //icons
 import { RiArrowRightLine } from "react-icons/ri"
 
-enum ProjectType {
+export enum ProjectType {
     Corporativo = 'Corporativo',
     Residencial = 'Residencial',
     Comercial = 'Comercial',
@@ -20,7 +18,7 @@ enum ProjectType {
     Otro = 'Otro'
 }
 
-interface ProjectCardProps {
+interface ProjectCard {
     title: string;
     image: string | undefined;
     arquitectos: string[];
@@ -30,39 +28,12 @@ interface ProjectCardProps {
 }
 
 
-interface ProjectCardProps {
-    projects: ProjectCardProps[];
+export interface ProjectCardProps {
+    projects: ProjectCard[];
 }
 
-const ProjectsCards: React.FC<ProjectCardProps> = ({ 
-    projects = [
-        {
-          title: 'FRISA',
-          image: projectFrisa,
-          arquitectos: ['Arq. Juan Pablo Pedraz'],
-          year: 2021,
-          address: 'Guatemala',
-          type: ProjectType.Corporativo
-        },
-        {
-            title: 'RESIDENCIA LAS BRISAS',
-            image: residencialesLasBrisas,
-            arquitectos: ['Arq. Juan Pablo Pedraz', 'Arq. Estefanía Rosas'],
-            year: 2022,
-            address: 'Guatemala',
-            type: ProjectType.Residencial
-          },
-        {
-            title: 'HUAWAI CANTEEN',
-            image: huaweiCanteen,
-            arquitectos: ['Arq. Estefanía Rosas', 'Arq. Marcela Benítez', 'Arq. Juan Pablo Pedraz'],
-            year: 2022,
-            address: 'El Salvador',
-            type: ProjectType.Corporativo
-          },
-        // ... otros proyectos
-      ]
-}) => {
+const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
+
     return (
         <Box maxW="1200px" mx="auto" p={8} rounded="md" shadow="md" zIndex={2} position="relative" 
         _before={{

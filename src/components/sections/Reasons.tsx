@@ -8,36 +8,14 @@ interface ReasonProps {
   description: string;
 }
 
-interface ReasonsProps {
+export interface ReasonsProps {
   title: string;
   reasons: ReasonProps[];
   backgroundImage?: string;
   subtitle?: string;
 }
 
-const Reasons: React.FC<ReasonsProps> = ({
-  title = '¿Por qué escoger Pedraz Arquitectos?',
-  subtitle = 'Cuatro razones para elegirnos y hacer realidad tus sueños de diseño interior',
-  reasons = [
-    {
-      title: 'Diseño personalizado',
-      description: 'Creamos espacios únicos que reflejan tu estilo y necesidades individuales.',
-    },
-    {
-      title: 'Innovación y creatividad',
-      description: 'Utilizamos las últimas tendencias y técnicas para ofrecer soluciones innovadoras.',
-    },
-    {
-      title: 'Compromiso con la calidad',
-      description: 'Nuestra atención al detalle garantiza acabados impecables y duraderos.',
-    },
-    {
-      title: 'Experiencia y profesionalismo',
-      description: 'Un equipo de expertos te acompaña en cada paso del proceso, asegurando resultados excepcionales.',
-    },
-  ],
-  backgroundImage,
-}) => {
+const Reasons: React.FC<ReasonsProps> = ({title,subtitle,reasons,backgroundImage}) => {
   return (
     <Box bgImage={backgroundImage} bgSize="cover"  position="relative">
       <Box bg="white" maxW="1200px" mx="auto" p={8} rounded="md" shadow="md">

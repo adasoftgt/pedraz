@@ -6,19 +6,15 @@ import NatureLogo from '@/assets/img/nature-logo.png';
 // colors
 import { Dark,Light } from '@/layout/colors/mode';
 
-interface BannerNatureProps {
+export interface BannerNatureProps {
   title: string;
   description: string;
   description2?: string;
   backgroundImage: string;
 }
 
-const BannerNature: React.FC<BannerNatureProps> = ({
-  title = 'Amables con la naturaleza',
-  description = 'La responsabilidad que conlleva cada una de nuestras acciones con el cambio climático nos ha llevado a crear espacios sostenibles. Esto es posible gracias a nuestras prácticas de diseño y construcción para maximizar la eficiencia energética, la reducción de desperdicio y conservación de recursos. ',
-  description2 = 'Como prueba de nuestra concientización tenemos proyectos respaldados por certificados reconocidos a nivel mundial tal como LEED y productos certificados WELL que representan nuestro compromiso con el constante reto de dejar el mundo mejor como lo encontramos, respondiendo al bien común.',
-  backgroundImage = '/ruta/a/tu/imagen.jpg',
-}) => {
+const BannerNature: React.FC<BannerNatureProps> = ({title,description,description2,backgroundImage}) => {
+ 
   return (
     <Box bgImage={`url(${backgroundImage})`} bgSize="cover" position="relative"
         _before={{

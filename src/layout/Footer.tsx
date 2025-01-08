@@ -1,10 +1,14 @@
 import React from 'react';
 
+import {Box,Text} from '@chakra-ui/react';
+
 const Footer: React.FC = () => {
     return (
-        <footer style={{ padding: '1rem', backgroundColor: '#282c34', color: 'white', marginTop: 'auto' }}>
-            <p>&copy; 2023 My Website</p>
-        </footer>
+        <>
+            <Box bg="#282c34" color="white" p={4} textAlign="center" mt="auto" p="1rem" borderRadius={10}>
+                <Text>&copy; 2023 My Website</Text>
+            </Box>
+        </>
     );
 };
 

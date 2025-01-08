@@ -8,7 +8,7 @@ import { Dark,Light } from '@/layout/colors/mode';
 
 import { useColorMode } from '@/components/ui/color-mode';
 
-interface StatsProps {
+export interface StatsProps {
   title: string;
   stats: {
     label: string;
@@ -18,16 +18,7 @@ interface StatsProps {
   content?: string;
 }
 
-const Stats: React.FC<StatsProps> = ({
-  title = 'Arquitectura innovadora para espacios únicos',
-  stats = [
-    { label: 'Años de experiencia', value: '25' },
-    { label: 'Proyectos construidos', value: '250' },
-    { label: 'Metros cuadrados construidos', value: '100,000' },
-  ],
-  backgroundImage,
-  content = 'En Pedraz Arquitectos diseñamos personalizado reflejando tu identidad, optamos por soluciones innovadoras que potencian la productividad, y un compromiso inquebrantable con la calidad en cada detalle.',
-}) => {
+const Stats: React.FC<StatsProps> = ({title,stats,backgroundImage,content}) => {
   const { colorMode } = useColorMode();
 
   return (
