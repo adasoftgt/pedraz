@@ -1,14 +1,16 @@
 import React from 'react';
 
+import { Box } from '@chakra-ui/react';
+
 interface MainProps {
     children: React.ReactNode;
 }
 
 const Main: React.FC<MainProps> = ({ children }) => {
     return (
-        <main style={{ padding: '1rem', flex: '1' }}>
+        <Box as="main" pt="1em" pb="1em" flex="1">
             {children}
-        </main>
+        </Box>
     );
 };
 

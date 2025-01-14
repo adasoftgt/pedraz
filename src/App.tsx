@@ -171,7 +171,7 @@ function App() {
       <Us />
       <Banner 
         title = 'Somos un despacho de arquitectos que desarrolla espacios creativos de primera calidad.'
-        fontFamily = 'Body'
+        fontFamily = 'Playfair Display'
         fontSize = {{ base: '2xl', md: '4xl' }}
         backgroundColor = 'gray.100'
         color = 'black'
@@ -182,7 +182,6 @@ function App() {
       <OurTeam {...ourTeamData} />
       <BannerNature {...bannerNatureData} />
       <ProjectsCards {...projectsData}/>
-      <Contact/>
       
       
     </>

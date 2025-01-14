@@ -14,10 +14,10 @@ const Us: React.FC<UsProps> = () => {
             <Flex direction={{ base: 'column', md: 'row' }}>
                 <Image src={usImage} alt="Nuestra imagen" rounded="md" />
                 <Box ml={4} mt={{ base: 4, md: 0 }} pt={{ base: 0, md: "15%" }}>
-                    <Text fontSize="2xl" fontWeight="bold" color={{base:Light.colorTitle,_dark:Dark.colorTitle}}>NOSOTROS</Text>
+                    <Text fontSize="2xl" fontWeight="bold" color={{base:Light.colorTitle,_dark:Dark.colorTitle}} fontFamily="Popping">NOSOTROS</Text>
                     <Text
                         fontWeight="bold"
-                        fontFamily="body"
+                        fontFamily="Popping"
                         fontSize="lg"
                         color="black"
                         lineHeight="tall"
@@ -33,7 +33,7 @@ const Us: React.FC<UsProps> = () => {
                     </Text>
                     <Text
                         fontWeight="bold"
-                        fontFamily="body"
+                        fontFamily="Popping"
                         fontSize="lg"
                         color="black"
                         lineHeight="tall"

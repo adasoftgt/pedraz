@@ -5,6 +5,8 @@ import {
     IconButton,
     Text,
     useBreakpointValue,
+    Stack,
+    Image
 } from '@chakra-ui/react';
 
 import {
@@ -24,6 +26,13 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import { useColorMode,ColorModeButton } from '@/components/ui/color-mode';
 
+import { Dark,Light } from '@/layout/colors/mode';
+
+// images
+import logo from '@assets/img/pedraz-logo.png'
+
+
+
 const Navbar: React.FC = () => {
     const [open, setOpen] = useState(false)
     const isDesktop = useBreakpointValue({ base: false, md: true });
@@ -31,10 +40,29 @@ const Navbar: React.FC = () => {
 
     return (
         <Flex as="nav" bg="transparent" p={4} justify="space-between" alignItems="center" color="black">
-            <Box>
-                {/* Logo o nombre de la empresa */}
-                <Text fontWeight="bold" color={{ base: "black", _dark: "white" }}>Pedraz Arquitectos</Text>
-            </Box>
+            <Stack direction="row" >
+                <Box >
+                    <Image
+                        src={logo}
+                        alt="Logo"
+                        boxSize="100%"
+                        objectFit="cover"
+                        w="30px"
+                    />
+                </Box>
+                <Box>
+                    <Text 
+                        fontWeight="200" 
+                        pt="7px" 
+                        color="rgb(0, 0, 0)" 
+                        fontFamily={Light.fontFamilyTitle} 
+                        letterSpacing="wider"
+                        fontSize="20px"
+                    >
+                        Pedraz Arquitectos
+                    </Text>
+                </Box>
+            </Stack>
             {isDesktop ? (
                 <DrawerMenu direction={{ base: 'column', md: 'row' }} isDesktop={true}/>
             ) : (

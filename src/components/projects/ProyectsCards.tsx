@@ -71,7 +71,7 @@ const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
                         <Box key={project.title} borderWidth="1px" textAlign="left" borderRadius="lg" overflow="hidden">
                             <Image src={project.image} alt={project.title} objectFit="cover" width="100%" height="200px" />
                             <Box p="6"  h="100%">
-                                <Heading as="h3" size="md" fontSize="xl" mb={2} fontFamily={"body"} >
+                                <Heading as="h3" size="md" fontSize="xl" mb={2} fontFamily={"Playfair Display"}  >
                                     {project.title}
                                 </Heading>
                                 <Stack direction="column" gap="0" justify="space-between">

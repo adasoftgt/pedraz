@@ -23,7 +23,9 @@ const Light = {
     colorDescriptionDarkBackgroundImage:"white",
     bgButtom:"#d6a853",
     colorButtom:"black",
-    colorPlus:"#d6a853"
+    colorPlus:"#d6a853",
+    fontFamilyTitle:"Relaway",
+    fontFamilyContent:"Poppins"
 }
 
 export { Dark, Light };
