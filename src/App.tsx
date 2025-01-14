@@ -9,7 +9,7 @@ import Stats from '@/components/Grpstats/Stats'
 import Reasons from '@/components/sections/Reasons'
 import OurTeam from '@/components/sections/OurTeam'
 import BannerNature from '@/components/Banners/BannerNature'
-import Contact from '@/components/sections/Contact'
+//import Contact from '@/components/sections/Contact'
 
 //images
 import backgroundImage from '@assets/img/arquitectura-interiores-2.jpg';
@@ -142,7 +142,8 @@ function App() {
         arquitectos: ['Arq. Juan Pablo Pedraz'],
         year: 2021,
         address: 'Guatemala',
-        type: ProjectType.Corporativo
+        type: ProjectType.Corporativo,
+        viewButtomMore: false
       },
       {
           title: 'RESIDENCIA LAS BRISAS',
@@ -150,7 +151,8 @@ function App() {
           arquitectos: ['Arq. Juan Pablo Pedraz', 'Arq. Estefanía Rosas'],
           year: 2022,
           address: 'Guatemala',
-          type: ProjectType.Residencial
+          type: ProjectType.Residencial,
+          viewButtomMore: false
         },
       {
           title: 'HUAWAI CANTEEN',
@@ -158,7 +160,8 @@ function App() {
           arquitectos: ['Arq. Estefanía Rosas', 'Arq. Marcela Benítez', 'Arq. Juan Pablo Pedraz'],
           year: 2022,
           address: 'El Salvador',
-          type: ProjectType.Corporativo
+          type: ProjectType.Corporativo,
+          viewButtomMore: false
         },
       // ... otros proyectos
     ]

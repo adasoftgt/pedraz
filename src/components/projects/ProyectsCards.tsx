@@ -9,6 +9,9 @@ import { Dark, Light } from '@/layout/colors/mode';
 //icons
 import { RiArrowRightLine } from "react-icons/ri"
 
+//filtes
+import Filters from '../sections/Filtes';
+
 export enum ProjectType {
     Corporativo = 'Corporativo',
     Residencial = 'Residencial',
@@ -25,6 +28,7 @@ interface ProjectCard {
     year: number;
     address?: string;
     type?: ProjectType;
+    viewButtomMore: boolean;
 }
 
 
@@ -35,7 +39,7 @@ export interface ProjectCardProps {
 const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
 
     return (
-        <Box maxW="1200px" mx="auto" p={8} rounded="md" shadow="md" zIndex={2} position="relative" 
+        <Box mx="auto" p="8" rounded="md" shadow="md" zIndex={2} position="relative" 
         _before={{
             content: '""',
             position: 'absolute',
@@ -43,16 +47,17 @@ const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
             left: 0,
             width: '100%',
             height: '100%',
-            bg: 'white',
+            bg: 'black',
             opacity: 0.9,
             zIndex: 1,
+            borderRadius: "lg",
         }}
         >
             <Box mx="auto"  rounded="md" position="relative" zIndex={2}>
-                <Text fontSize="3xl" fontWeight="bold" textAlign="center" color={{ base: Light.colorTitle, _dark: Dark.colorTitle }} mt={8}>
+                <Text fontSize="3xl" fontWeight="bold" textAlign="center" color={{ base: Light.colorTitleDarkBackgroundImage, _dark: Dark.colorTitleDarkBackgroundImage }} mt={8}>
                     ALGUNOS DE NUESTROS PROYECTOS
                 </Text>
-                <Text fontSize="xl" ml={{base:"0",md:"25%"}} maxW={{base:"100%",md:"50%"}} textAlign="center" color={{ base: Light.colorSubtitle, _dark: Dark.colorSubtitle }} mt={8}>
+                <Text fontSize="xl" ml={{base:"0",md:"25%"}} maxW={{base:"100%",md:"50%"}} textAlign="center" color={{ base: Light.colorSubtitleDarkBackgroundImage, _dark: Dark.colorSubtitleDarkBackgroundImage }} mt={8}>
                     Diseñando espacios con visión.
                 </Text>
 
@@ -68,26 +73,30 @@ const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
 
                 <Grid templateColumns={{ base: 'repeat(1, 1fr)', md: 'repeat(3, 1fr)' }} gap={6}>
                     {projects.map((project) => (
-                        <Box key={project.title} borderWidth="1px" textAlign="left" borderRadius="lg" overflow="hidden">
+                        <Box key={project.title} borderWidth="1px" textAlign="left" borderRadius="lg" overflow="hidden" bg={(!project.viewButtomMore) ? Light.bgProject : "transparent"}>
                             <Image src={project.image} alt={project.title} objectFit="cover" width="100%" height="200px" />
                             <Box p="6"  h="100%">
-                                <Heading as="h3" size="md" fontSize="xl" mb={2} fontFamily={"Playfair Display"}  >
+                                <Heading as="h3" size="md" fontSize="xl" mb={2} fontFamily={Light.fontFamilyTitle}  >
                                     {project.title}
                                 </Heading>
-                                <Stack direction="column" gap="0" justify="space-between">
+                                <Stack direction="column" gap="0" justify="space-between" fontFamily={Light.fontFamilyContent}>
                                     <Text><Text as="strong">Arquitectos:</Text> {project.arquitectos.join(', ')}</Text>
                                     <Text><Text as="strong">Año:</Text> {project.year}, {project.address}</Text>
                                     <Text><Text as="strong">{project.type}</Text> </Text>
                                 </Stack>
-                                <Box display="flex" justifyContent="flex-start" mt="auto">
-                                    <Button colorScheme="blue" variant="outline" bg={{ base: Light.bgButtom, _dark: Dark.bgButtom }} color={{ base: Light.colorButtom, _dark: Dark.colorButtom }}>
+                                {project.viewButtomMore && (
+                                    <Box display="flex" justifyContent="flex-start" mt="auto">
+                                        <Button colorScheme="blue" variant="outline" bg={{ base: Light.bgButtom, _dark: Dark.bgButtom }} color={{ base: Light.colorButtom, _dark: Dark.colorButtom }}>
                                         <RiArrowRightLine /> Mas fotos
-                                    </Button>
-                                </Box>
+                                        </Button>
+                                    </Box>
+                                )}
+                                
                             </Box>
                         </Box>
                     ))}
                 </Grid>
+                <Filters />
             </Box>
             
         </Box>

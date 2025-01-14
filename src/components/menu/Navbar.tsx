@@ -26,7 +26,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import { useColorMode,ColorModeButton } from '@/components/ui/color-mode';
 
-import { Dark,Light } from '@/layout/colors/mode';
+import { Light } from '@/layout/colors/mode';
 
 // images
 import logo from '@assets/img/pedraz-logo.png'
@@ -55,9 +55,9 @@ const Navbar: React.FC = () => {
                         fontWeight="200" 
                         pt="7px" 
                         color="rgb(0, 0, 0)" 
-                        fontFamily={Light.fontFamilyTitle} 
-                        letterSpacing="wider"
-                        fontSize="20px"
+                        fontFamily={Light.fontFamilyTextLogo} 
+                        letterSpacing="0.3em"
+                        fontSize="15px"
                     >
                         Pedraz Arquitectos
                     </Text>

@@ -22,10 +22,12 @@ const Light = {
     colorDescription:"black",
     colorDescriptionDarkBackgroundImage:"white",
     bgButtom:"#d6a853",
+    bgProject:"#d6a853",
     colorButtom:"black",
     colorPlus:"#d6a853",
     fontFamilyTitle:"Relaway",
-    fontFamilyContent:"Poppins"
+    fontFamilyContent:"Poppins",
+    fontFamilyTextLogo:"Poppins"
 }
 
 export { Dark, Light };

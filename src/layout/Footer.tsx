@@ -23,7 +23,7 @@ import pedraz_logo from '@images/pedraz-logo.png';
 const Footer: React.FC = () => {
     return (
         <>
-            <Box bg="#282c34" color="white" p={4} textAlign="center" mt="auto" p="1rem" borderRadius={10}>
+            <Box bg="#282c34" color="white" p={4} textAlign="center" mt="auto" borderRadius={10}>
                 <Container maxW="container.xl" centerContent>
                     <Flex direction={{base:"column",md:"row"}} >
                         <VStack align="start" textAlign="left" >

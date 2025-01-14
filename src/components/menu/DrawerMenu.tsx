@@ -16,6 +16,8 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({direction,isDesktop = true}) => 
                     mr={4} 
                     bg={{ base: "transparent" }}
                     color={{ base: "black", _dark: "white" }}
+                    textTransform="uppercase"
+                    
                 >
                     Inicio
                 </Button>
@@ -23,6 +25,8 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({direction,isDesktop = true}) => 
                     mr={4} 
                     bg={{ base: "transparent" }}
                     color={{ base: "black", _dark: "white" }}
+                    textTransform="uppercase"
+                    
                 >
                     Nosotros
                 </Button>
@@ -30,6 +34,8 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({direction,isDesktop = true}) => 
                     mr={4} 
                     bg={{ base: "transparent" }}
                     color={{ base: "black", _dark: "white" }}
+                    textTransform="uppercase"
+                    
                 >
                     Proyectos
                 </Button>
@@ -37,6 +43,8 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({direction,isDesktop = true}) => 
                     mr={4} 
                     bg={{ base: "transparent" }}
                     color={{ base: "black", _dark: "white" }}
+                    textTransform="uppercase"
+                    
                 >
                     Contacto
                 </Button>
