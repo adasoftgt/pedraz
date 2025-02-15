@@ -2,6 +2,7 @@ import React from 'react';
 import { Flex } from '@chakra-ui/react';
 import { Button } from '@/components/ui/button';
 import { ColorModeButton } from '@/components/ui/color-mode';
+import { NavLink } from 'react-router-dom';
 interface DrawerMenuProps {
     direction: Object,
     isDesktop: boolean
@@ -11,25 +12,29 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({direction,isDesktop = true}) => 
     return (
         <>
             <Flex direction={direction}>
-                <Button 
-                    variant="ghost"
-                    mr={4} 
-                    bg={{ base: "transparent" }}
-                    color={{ base: "black", _dark: "white" }}
-                    textTransform="uppercase"
-                    
-                >
-                    Inicio
-                </Button>
-                <Button 
-                    mr={4} 
-                    bg={{ base: "transparent" }}
-                    color={{ base: "black", _dark: "white" }}
-                    textTransform="uppercase"
-                    
-                >
-                    Nosotros
-                </Button>
+                <NavLink to={"/pedraz/"}>
+                    <Button 
+                        variant="ghost"
+                        mr={4} 
+                        bg={{ base: "transparent" }}
+                        color={{ base: "black", _dark: "white" }}
+                        textTransform="uppercase"
+                        
+                    >
+                        Inicio
+                    </Button>
+                </NavLink>
+                <NavLink to={"/pedraz/us/"}>
+                    <Button 
+                        mr={4} 
+                        bg={{ base: "transparent" }}
+                        color={{ base: "black", _dark: "white" }}
+                        textTransform="uppercase"
+                        
+                    >
+                        Nosotros
+                    </Button>
+                </NavLink>
                 <Button 
                     mr={4} 
                     bg={{ base: "transparent" }}
@@ -48,7 +53,8 @@ const DrawerMenu: React.FC<DrawerMenuProps> = ({direction,isDesktop = true}) => 
                 >
                     Contacto
                 </Button>
-                {isDesktop && <ColorModeButton/>}
+                {/*Se van a eliminar porque no se quiere que cambie a dark*/}
+                {/*isDesktop && <ColorModeButton/>*/}
             </Flex>
             
         </>

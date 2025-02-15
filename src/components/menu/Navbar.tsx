@@ -26,7 +26,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 
 import { useColorMode,ColorModeButton } from '@/components/ui/color-mode';
 
-import { Light } from '@/layout/colors/mode';
+import { Light } from '@/components/layouts/landingpage/colors/mode';
 
 // images
 import logo from '@assets/img/pedraz-logo.png'
@@ -54,7 +54,8 @@ const Navbar: React.FC = () => {
                     <Text 
                         fontWeight="200" 
                         pt="7px" 
-                        color="rgb(0, 0, 0)" 
+                        //color="rgb(0, 0, 0)"
+                        color={{ base: "black", _dark: "white" }}
                         fontFamily={Light.fontFamilyTextLogo} 
                         letterSpacing="0.3em"
                         fontSize="15px"
@@ -81,7 +82,7 @@ const Navbar: React.FC = () => {
                         </DrawerTrigger>
                         <DrawerContent offset="4" rounded="md">
                             <DrawerHeader>
-                                <ColorModeButton/>
+                                {/*<ColorModeButton/>*/}
                                 <DrawerTitle>Pedraz</DrawerTitle>
                             </DrawerHeader>
                             <DrawerBody>

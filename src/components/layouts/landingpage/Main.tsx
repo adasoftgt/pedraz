@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 
 interface MainProps {
     children: React.ReactNode;
@@ -8,9 +8,9 @@ interface MainProps {
 
 const Main: React.FC<MainProps> = ({ children }) => {
     return (
-        <Box as="main" pt="1em" pb="1em" flex="1">
+        <Flex as="main" direction="column" p={2}>
             {children}
-        </Box>
+        </Flex>
     );
 };
 

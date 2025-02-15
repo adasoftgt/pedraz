@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 
 
 //colores
-import { Dark, Light } from '@/layout/colors/mode';
+import { Dark, Light } from '@/components/layouts/landingpage/colors/mode';
 
 //icons
 import { RiArrowRightLine } from "react-icons/ri"
@@ -54,10 +54,10 @@ const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
         }}
         >
             <Box mx="auto"  rounded="md" position="relative" zIndex={2}>
-                <Text fontSize="3xl" fontWeight="bold" textAlign="center" color={{ base: Light.colorTitleDarkBackgroundImage, _dark: Dark.colorTitleDarkBackgroundImage }} mt={8}>
+                <Text fontSize="3xl" fontWeight="bold" fontFamily={Light.fontFamilyTitle} textAlign="center" color={{ base: Light.colorTitleDarkBackgroundImage, _dark: Dark.colorTitleDarkBackgroundImage }} mt={8}>
                     ALGUNOS DE NUESTROS PROYECTOS
                 </Text>
-                <Text fontSize="xl" ml={{base:"0",md:"25%"}} maxW={{base:"100%",md:"50%"}} textAlign="center" color={{ base: Light.colorSubtitleDarkBackgroundImage, _dark: Dark.colorSubtitleDarkBackgroundImage }} mt={8}>
+                <Text fontSize="xl" ml={{base:"0",md:"25%"}} fontFamily={Light.fontFamilyContent} maxW={{base:"100%",md:"50%"}} textAlign="center" color={{ base: Light.colorSubtitleDarkBackgroundImage, _dark: Dark.colorSubtitleDarkBackgroundImage }} mt={8}>
                     Diseñando espacios con visión.
                 </Text>
 
@@ -80,9 +80,9 @@ const ProjectsCards: React.FC<ProjectCardProps> = ({projects}) => {
                                     {project.title}
                                 </Heading>
                                 <Stack direction="column" gap="0" justify="space-between" fontFamily={Light.fontFamilyContent}>
-                                    <Text><Text as="strong">Arquitectos:</Text> {project.arquitectos.join(', ')}</Text>
-                                    <Text><Text as="strong">Año:</Text> {project.year}, {project.address}</Text>
-                                    <Text><Text as="strong">{project.type}</Text> </Text>
+                                    <Text fontFamily={Light.fontFamilyTitle}><Text as="strong" fontFamily={Light.fontFamilyTitle}>Arquitectos:</Text> {project.arquitectos.join(', ')}</Text>
+                                    <Text fontFamily={Light.fontFamilyTitle}><Text as="strong" fontFamily={Light.fontFamilyTitle}>Año:</Text> {project.year}, {project.address}</Text>
+                                    <Text fontFamily={Light.fontFamilyTitle}><Text as="strong" fontFamily={Light.fontFamilyTitle}>{project.type}</Text> </Text>
                                 </Stack>
                                 {project.viewButtomMore && (
                                     <Box display="flex" justifyContent="flex-start" mt="auto">

@@ -47,47 +47,50 @@ import {
   } from '@chakra-ui/react';
 
   //colores
-import { Dark, Light } from '@/layout/colors/mode';
+import { Dark, Light } from '@/components/layouts/landingpage/colors/mode';
 
 //images
 import pedrazLogo from '@images/pedraz-logo.png';
+
+import Section from '@/components/layouts/landingpage/Section';
   
 const Contact = () => {
     return (
+      <Section>
         <Box bg="yellow.300" p={8}>
-        <Stack direction={{ base: 'column', md: 'row' }}>
-            <Flex direction="column" alignItems="center" w={{ base: '100%', md: '50%' }}>
-                <Heading as="h2" mb={4}>
-                    Ingresa tu nombre
-                </Heading>
-                <Input placeholder="Tu nombre" />
-                <Heading as="h2" mb={4}>
-                    ¿Cuál es tu correo electrónico?
-                </Heading>
-                <Input type="email" placeholder="Tu correo electrónico" />
-                <Heading as="h2" mb={4}>
-                    ¿En qué servicio estás interesado?
-                </Heading>
-                <Textarea placeholder="Describe tu interés" />
-                <Heading as="h2" mb={4}>
-                    ¿Cuál es el nombre de tu empresa?
-                </Heading>
-                <Input placeholder="Nombre de tu empresa" />
-                <Box display="flex" justifyContent="flex-start" mt="auto" pt="10px">
-                    <Button colorScheme="blue" variant="outline" bg={{ base: Light.bgButtom, _dark: Dark.bgButtom }} color={{ base: Light.colorButtom, _dark: Dark.colorButtom }}>
-                        Mandar formulario
-                    </Button>
-                </Box>
-            </Flex>
-            <Box bg="black" w="100%" ml={{ base: 0, md: 8 }} p={8} rounded="md">
-            {/* Aquí puedes agregar tus elementos gráficos personalizados */}
-                <Box display="flex" alignItems="center" justifyContent="center" height="100%">
-                    <Image src={pedrazLogo} alt="Descripción de la imagen"  />
-                </Box>
-            </Box>
-        </Stack>
-        
+          <Stack direction={{ base: 'column', md: 'row' }}>
+              <Flex direction="column" alignItems="center" w={{ base: '100%', md: '50%' }}>
+                  <Heading as="h2" mb={4}>
+                      Ingresa tu nombre
+                  </Heading>
+                  <Input placeholder="Tu nombre" />
+                  <Heading as="h2" mb={4}>
+                      ¿Cuál es tu correo electrónico?
+                  </Heading>
+                  <Input type="email" placeholder="Tu correo electrónico" />
+                  <Heading as="h2" mb={4}>
+                      ¿En qué servicio estás interesado?
+                  </Heading>
+                  <Textarea placeholder="Describe tu interés" />
+                  <Heading as="h2" mb={4}>
+                      ¿Cuál es el nombre de tu empresa?
+                  </Heading>
+                  <Input placeholder="Nombre de tu empresa" />
+                  <Box display="flex" justifyContent="flex-start" mt="auto" pt="10px">
+                      <Button colorScheme="blue" variant="outline" bg={{ base: Light.bgButtom, _dark: Dark.bgButtom }} color={{ base: Light.colorButtom, _dark: Dark.colorButtom }}>
+                          Mandar formulario
+                      </Button>
+                  </Box>
+              </Flex>
+              <Box bg="black" w="100%" ml={{ base: 0, md: 8 }} p={8} rounded="md">
+              {/* Aquí puedes agregar tus elementos gráficos personalizados */}
+                  <Box display="flex" alignItems="center" justifyContent="center" height="100%">
+                      <Image src={pedrazLogo} alt="Descripción de la imagen"  />
+                  </Box>
+              </Box>
+          </Stack>
         </Box>
+      </Section>
     );
 };
   

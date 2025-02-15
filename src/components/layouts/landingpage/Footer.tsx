@@ -17,13 +17,15 @@ import {
 import { Dark, Light } from './colors/mode';
 
 import pedraz_logo from '@images/pedraz-logo.png';
+import Section from '@/components/layouts/landingpage/Section';
 
 
 
 const Footer: React.FC = () => {
     return (
-        <>
-            <Box bg="#282c34" color="white" p={4} textAlign="center" mt="auto" borderRadius={10}>
+        
+        <Section>
+            <Box bg="#282c34" color="white" p={{base:2,md:4}} textAlign="center" mt="auto" borderRadius={10}>
                 <Container maxW="container.xl" centerContent>
                     <Flex direction={{base:"column",md:"row"}} >
                         <VStack align="start" textAlign="left" >
@@ -93,7 +95,8 @@ const Footer: React.FC = () => {
                     </VStack>
                 </Container>
             </Box>
-        </>
+        </Section>
+        
     );
 };
 
