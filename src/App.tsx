@@ -10,6 +10,7 @@ import MainLayout from '@/layouts/MainLayout';
 import Home from '@/pages/Home';
 import OurTeamPage from '@/pages/OurTeamPage';
 import UsPage from '@/pages/UsPage';
+import Project from '@/pages/Project';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path="ourteam" element={<OurTeamPage />} />
           <Route path="us" element={<UsPage />} />
+          <Route path="project" element={<Project />} />
         </Route>
       </Routes>
     </BrowserRouter>
