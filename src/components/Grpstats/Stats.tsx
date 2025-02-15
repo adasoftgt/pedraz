@@ -55,7 +55,7 @@ const Stats: React.FC<StatsProps> = ({title,stats,backgroundImage,content}) => {
           {stats.map((stat, index) => (
             <Box key={index} textAlign="center" px={4}>
                 <Stack direction="row" align="center" justify="center">
-                  <Text fontSize={{base:"5xl",md:"6xl"}} fontWeight="bold">
+                  <Text fontSize={{base:"5xl",md:"6xl"}} fontWeight="bold" color={{base:Light.colorSubtitle,_dark:Dark.colorSubtitle}} fontFamily={Light.fontFamilyTitle}>
                     {stat.value}
                   </Text>
                   <Box pt={{base:"5px",md:"15px"}} fontSize="xl" fontWeight="bold" >
@@ -65,7 +65,7 @@ const Stats: React.FC<StatsProps> = ({title,stats,backgroundImage,content}) => {
                 </Stack>
                 
               
-              <Text fontFamily={Light.fontFamilyTitle}>{stat.label}</Text>
+              <Text color={{base:Light.colorSubtitle,_dark:Dark.colorSubtitle}} fontFamily={Light.fontFamilyTitle}>{stat.label}</Text>
             </Box>
           ))}
         </Flex>
