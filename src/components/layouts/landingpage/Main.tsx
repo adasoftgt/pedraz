@@ -8,7 +8,7 @@ interface MainProps {
 
 const Main: React.FC<MainProps> = ({ children }) => {
     return (
-        <Flex as="main" direction="column" p={2}>
+        <Flex as="main" direction="column" p={2} overflowX="hidden">
             {children}
         </Flex>
     );
