@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 
 import { Box, Image } from '@chakra-ui/react';
 import { SimpleGrid} from "@chakra-ui/react";
-import { Button } from '@/components/ui/button';
+
 import {
     DialogBody,
     DialogCloseTrigger,
