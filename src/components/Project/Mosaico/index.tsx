@@ -7,7 +7,7 @@ interface MosaicoProps {
 
 const Mosaico: React.FC<MosaicoProps> = ({children}) => {
     return (
-        <Flex  direction={{ base: "row", md: "column", lg:"row" }}>
+        <Flex  direction={{ base: "column", md: "row", lg:"row" }}>
              {children}
         </Flex>
     );
